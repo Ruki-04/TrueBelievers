@@ -1,0 +1,115 @@
+.portada {
+  position: relative;
+}
+
+.portada img {
+  position: absolute;
+}
+
+.portada .texto {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  z-index: 2;
+}
+
+.filtros {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+.portada {
+  margin-top: 6rem;
+}
+.portada img {
+  margin-bottom: 0;
+}
+.cartaAdd {
+  height: 18rem;
+  background-color: transparent;
+}
+.card {
+  background-color: transparent !important;
+  padding-top: 2rem !important;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  color: white;
+
+  text-align: center;
+}
+img {
+  width: 75%;
+  position: relative !important;
+}
+.card:hover img {
+  box-shadow: 0 0.5rem 1.5rem #000000a0;
+  background-color: transparent;
+}
+.card:hover {
+  padding-top: 1rem !important;
+}
+.busqueda input {
+  background-color: transparent;
+  border-color: transparent;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.busqueda input:focus {
+  border-color: transparent;
+  outline: none;
+  border-bottom-color: rgba(47, 47, 47, 0.478);
+}
+.busqueda button {
+  background-color: transparent;
+
+  color: white;
+  border: transparent;
+
+  padding: 0.3rem;
+
+  margin: 0.3rem;
+}
+
+.add {
+  position: relative;
+}
+
+.add img {
+  position: absolute;
+
+  z-index: 1;
+}
+
+.add .icono {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 2;
+}
+.card:hover .icono {
+  color: #ed1d24;
+}
+.titulo-lista {
+  color: rgba(255, 255, 255, 0.727);
+  font-family: "Punishment";
+  font-size: 350%;
+
+  text-align: center;
+}
+.logo-marvel {
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+
+  font-family: "Marvel";
+  background-color: rgb(237, 29, 36);
+  color: white;
+}

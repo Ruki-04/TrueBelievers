@@ -1,0 +1,28 @@
+.modal {
+  color: black;
+  text-align: left;
+}
+.modal-body {
+  padding: 2rem;
+}
+.modal-boddy label,
+.modal-body input {
+  margin-top: 1rem;
+  border-radius: 3rem;
+}
+
+button {
+  margin: 1rem;
+
+  border-radius: 3rem;
+}
+.modal-body label {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.btn-outline-danger {
+  width: 2.3rem !important;
+}
+.alerta {
+  color: rgb(237, 29, 36);
+}

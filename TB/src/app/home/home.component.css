@@ -1,0 +1,24 @@
+.lista::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+}
+.lista::-webkit-scrollbar-track {
+  background: transparent;
+}
+.lista::-webkit-scrollbar-thumb {
+  background-color: rgb(237, 29, 36);
+}
+.titulo-lista {
+  color: rgba(255, 255, 255, 0.727);
+  font-family: "Punishment";
+  font-size: 3rem;
+}
+.logo-marvel {
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+
+  font-family: "Marvel";
+  background-color: rgb(237, 29, 36);
+  color: white;
+}

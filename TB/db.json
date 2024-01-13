@@ -1,0 +1,399 @@
+{
+  "supers": [
+    {
+      "id": "09",
+      "img": "./assets/IronManT.jpg",
+      "nombre": "IronMan",
+      "identidad": "Tony Stark",
+      "poderes": [
+        "superfuerza",
+        " vuelo",
+        " armas integradas",
+        " inteligencia superior",
+        " nanotecnología",
+        " control de otras armaduras"
+      ],
+      "debilidades": [
+        "dependencia de la armadura",
+        " daño al corazón",
+        " alcoholismo",
+        " arrogancia",
+        " enemigos poderosos"
+      ],
+      "peso": 102,
+      "pesoSuper": 225,
+      "estatura": 185,
+      "estaturaSuper": 203,
+      "residencia": "Malibú, California (en los cómics), Nueva York, Nueva York (en las películas)",
+      "afiliacion": [
+        "Vengadores",
+        " Illuminati",
+        " S.H.I.E.L.D.",
+        " Stark Industries"
+      ],
+      "enemigos": [
+        "Mandarín",
+        " Iron Monger",
+        " Whiplash",
+        " Thanos",
+        " Ultron",
+        " Capitán América (en Civil War)"
+      ],
+      "origen": "heredó la empresa Stark Industries de su padre, fue secuestrado por terroristas y se construyó una armadura para escapar, se convirtió en superhéroe y miembro fundador de los Vengadores",
+      "personalidad": "carismático, ingenioso, sarcástico, egocéntrico, altruista, valiente, responsable, culpable"
+    },
+    {
+      "id": "2",
+      "img": "./assets/SpidermanT.jpg",
+      "nombre": "Spiderman",
+      "identidad": "Peter Parker",
+      "poderes": [
+        "fuerza",
+        "agilidad",
+        "velocidad",
+        "reflejos sobrehumanos",
+        "capacidad de adherirse a las superficies",
+        "percibir el peligro con su sentido arácnido"
+      ],
+      "debilidades": [
+        "ataques físicos y psíquicos",
+        "sonido",
+        "fuego",
+        "veneno",
+        "su sentido arácnido puede ser anulado o confundido por algunos enemigos o tecnologías",
+        "problemas personales, como su doble vida, su culpa o sus relaciones amorosas."
+      ],
+      "peso": 76,
+      "pesoSuper": 95,
+      "estatura": 1.78,
+      "estaturaSuper": 1.85,
+      "residencia": " Nueva York, Estados Unidos",
+      "afiliacion": [
+        "Vengadores",
+        "Cuatro Fantásticos",
+        "Nuevos Vengadores",
+        "Daredevil",
+        "Iron Man",
+        "Gata Negra"
+      ],
+      "enemigos": [
+        "Duende Verde",
+        "Doctor Octopus",
+        "Venom",
+        "el Lagarto",
+        "el Buitre",
+        "Electro",
+        " Hombre de Arena",
+        "el Escorpión",
+        "Mysterio",
+        "el Hombre de Metal"
+      ],
+      "origen": "Spider-Man se originó cuando Peter Parker, un joven huérfano y marginado, fue picado por una araña radiactiva durante una visita a un laboratorio. Al descubrir sus poderes, decidió usarlos para ganar dinero y fama, pero ignoró a un ladrón que luego mató a su tío Ben. Esto le hizo aprender la lección de que \"un gran poder conlleva una gran responsabilidad\" y dedicarse a ser un héroe.",
+      "personalidad": "Spider-Man es un héroe valiente, inteligente, ingenioso y compasivo, que siempre trata de hacer lo correcto y ayudar a los demás. Sin embargo, también es inseguro, impulsivo, sarcástico y propenso a meterse en problemas. A menudo se siente solo y culpable por las muertes de sus seres queridos, como su tío Ben, su padre adoptivo, o Gwen Stacy, su primer amor. A pesar de todo, mantiene su optimismo y su sentido del humor, bromeando con sus enemigos y amigos."
+    },
+    {
+      "id": "3",
+      "img": "./assets/ThorT.jpg",
+      "nombre": "Thor",
+      "identidad": "Donald Blake",
+      "poderes": [
+        "superfuerza",
+        "superresistencia",
+        "supervelocidad",
+        "longevidad sobrehumana",
+        "la capacidad de controlar el clima, el rayo y el trueno",
+        "usa un martillo llamado Mjolnir, que le permite volar, teletransportarse, crear portales y lanzar poderosos golpes"
+      ],
+      "debilidades": [
+        "vulnerable a las armas mágicas",
+        "la manipulación mental",
+        "la pérdida de su martillo",
+        "Si se separa de Mjolnir por más de 60 segundos, vuelve a su forma humana",
+        "tiene un carácter orgulloso, impulsivo y testarudo, que a veces le causa problemas"
+      ],
+      "peso": 68,
+      "pesoSuper": 290,
+      "estatura": 1.83,
+      "estaturaSuper": 1.98,
+      "residencia": "Tor vive en Asgard, el reino de los dioses nórdicos, donde es el príncipe heredero. A veces también viaja a la Tierra, donde es uno de los fundadores de los Vengadores, o a otros mundos, donde combate el mal",
+      "afiliacion": [
+        "Vengadores",
+        "Cuatro Fantásticos",
+        "Defensores",
+        "Guardianes de la Galaxia",
+        " Iron Man",
+        "Capitán América",
+        "Hulk",
+        "Viuda Negra"
+      ],
+      "enemigos": [
+        "Loki",
+        "el Destructor",
+        "el Hombre Absorbente",
+        " Thanos",
+        "Surtur"
+      ],
+      "origen": "or se originó cuando Odín, el rey de Asgard, decidió enviar a su hijo a la Tierra para que aprendiera humildad y compasión. Para ello, lo transformó en Donald Blake, un médico cojo, y le hizo olvidar su verdadera identidad. Durante un viaje a Noruega, Blake encontró una cueva donde estaba escondido el martillo Mjolnir, que le devolvió su forma y sus recuerdos de Tor. Desde entonces, se dedicó a ser un héroe tanto en la Tierra como en Asgard",
+      "personalidad": "Tor es un héroe valiente, noble, generoso y leal, que siempre defiende la justicia y la paz. Sin embargo, también es arrogante, imprudente, desobediente y rebelde, lo que le hace entrar en conflicto con su padre y con otros héroes. A menudo se siente dividido entre sus dos mundos, el de los dioses y el de los mortales, y busca su propio destino."
+    },
+    {
+      "id": "4",
+      "img": "./assets/ViudaNegraT.jpg",
+      "nombre": "La Viuda Negra",
+      "identidad": "Natasha Romanoff",
+      "poderes": [
+        "Envejecimiento lento y sistema inmunológico mejorado",
+        "Experta táctica, combatiente cuerpo a cuerpo y agente secreta",
+        "Tiradora experta y dominio de varias otras armas"
+      ],
+      "debilidades": [
+        "No tiene poderes sobrehumanos",
+        "Su pasado traumático como espía rusa",
+        "Su lealtad a sus amigos y aliados"
+      ],
+      "peso": 59,
+      "pesoSuper": 59,
+      "estatura": 1.7,
+      "estaturaSuper": 1.7,
+      "residencia": "Varía según sus misiones",
+      "afiliacion": [
+        "Vengadores",
+        "S.H.I.E.L.D.",
+        "Campeones",
+        "Defensores",
+        "Thunderbolts"
+      ],
+      "enemigos": [
+        "Taskmaster",
+        "Madame Hydra",
+        "Crossbones",
+        "Snapdragon",
+        "Bullseye",
+        "Iron Maiden",
+        "Red Guardian",
+        "Yelena Belova"
+      ],
+      "origen": "Fue una espía rusa entrenada en la Habitación Roja, donde se le administró un suero similar al del Capitán América. Más tarde desertó a los Estados Unidos y se unió a los Vengadores.",
+      "personalidad": "Es una mujer inteligente, valiente, leal y decidida. Tiene un sentido del humor sarcástico y una actitud pragmática. A veces puede ser fría y distante, debido a su pasado como asesina. Sin embargo, también tiene un lado compasivo y protector con sus amigos y seres queridos."
+    },
+    {
+      "id": "5",
+      "img": "./assets/HulkT.jpg",
+      "nombre": "Hulk",
+      "identidad": "Robert Bruce Banner",
+      "poderes": [
+        "Super fuerza",
+        "Super resistencia",
+        "Super salto",
+        "Regeneración",
+        "Factor de curación acelerado"
+      ],
+      "debilidades": [
+        "Radiación cósmica",
+        "Magia",
+        "Armas y tecnología avanzada",
+        "Su mente"
+      ],
+      "peso": 58,
+      "pesoSuper": 635,
+      "estatura": 1.73,
+      "estaturaSuper": 3.0,
+      "residencia": "Hell's Kitchen, Nueva York",
+      "afiliacion": [
+        "Los Vengadores",
+        "Los Defensores",
+        "Los 4 Fantásticos",
+        "Warbound"
+      ],
+      "enemigos": [
+        "Abominación",
+        "Líder",
+        "Hombre Absorbente",
+        "Zzzax",
+        "Thunderbolt Ross",
+        "La Mano",
+        "Maestro",
+        "Thanos"
+      ],
+      "origen": "Se transformó en Hulk tras una exposición accidental a los rayos gamma durante la detonación de una bomba experimental",
+      "personalidad": "Como Bruce Banner: Inteligente, calmado, pensador, sarcástico, heroico, responsable, desinteresado. Como Hulk: Enojado, de mal carácter, tosco, poderoso, bullicioso, odioso y agresivo, impulsivo, heroico, amoroso, de buen corazón y desinteresado"
+    },
+    {
+      "id": "6",
+      "img": "./assets/SpiderMoralesT.jpg",
+      "nombre": "Spiderman",
+      "identidad": "Miles Morales",
+      "poderes": [
+        "trepar muros",
+        "sentido arácnido",
+        "fuerza y agilidad sobrehumanas",
+        "lanzar telarañas",
+        "camuflaje",
+        "rayo venenoso"
+      ],
+      "debilidades": ["gases", "enfermedades", "pobreza", "seres queridos"],
+      "peso": 67,
+      "pesoSuper": 167,
+      "estatura": 1.68,
+      "estaturaSuper": 1.78,
+      "residencia": "Forest Hills, Queens, Nueva York",
+      "afiliacion": ["Los Vengadores", "Los Campeones"],
+      "enemigos": [
+        "Duende Verde",
+        "Doctor Octopus",
+        "Venom",
+        "Carnage",
+        "Kingpin",
+        "Mysterio"
+      ],
+      "origen": "mordido por una araña genéticamente modificada",
+      "personalidad": "valiente, inteligente, responsable, leal, divertido"
+    },
+    {
+      "id": "7",
+      "img": "./assets/ojodeHalconT.jpg",
+      "nombre": "Ojo de Halcón",
+      "identidad": "Clint Barton",
+      "poderes": [
+        "Maestro arquero y tirador",
+        "Experto en artes marciales, combatiente cuerpo a cuerpo y acróbata",
+        "Estratega y táctico experto",
+        "Utiliza equipo de alta tecnología, armadura, arco compuesto y varios tipos de flechas especiales"
+      ],
+      "debilidades": [
+        "No tiene superpoderes",
+        "Es vulnerable a ataques físicos y mentales",
+        "Tiene problemas de audición y usa un audífono",
+        "Sufre de depresión y culpa por su pasado"
+      ],
+      "peso": 104,
+      "pesoSuper": 104,
+      "estatura": 1.88,
+      "estaturaSuper": 1.88,
+      "residencia": "Nueva York, Estados Unidos",
+      "afiliacion": [
+        "Los Vengadores",
+        "Thunderbolts",
+        "Vengadores Secretos",
+        "Vengadores de la Costa Oeste",
+        "Nuevos Vengadores",
+        "S.H.I.E.L.D."
+      ],
+      "enemigos": [
+        "Circo del Crimen",
+        "Loki",
+        "Ultrón",
+        "Cráneo Rojo",
+        "M.O.D.O.K.",
+        "Abominación",
+        "HYDRA",
+        "Líder",
+        "Kang el Conquistador",
+        "Thanos",
+        "Galactus"
+      ],
+      "origen": "Hijo de padres fallecidos, se escapó de un orfanato y se unió a un circo, donde aprendió a usar el arco y la flecha. Fue villano por un tiempo, pero luego se unió a los Vengadores y se convirtió en un héroe.",
+      "personalidad": "Valiente, leal, protector, sarcástico, rebelde, impulsivo, obstinado, independiente, ingenioso, optimista."
+    },
+    {
+      "id": "8",
+      "img": "./assets/CapitanAT.jpg",
+      "nombre": "Capitán América",
+      "identidad": "Steven - Grant Rogers",
+      "poderes": [
+        "Sentidos, agilidad, velocidad y fuerza sobrehumanas",
+        "Gran habilidad con su escudo",
+        "Instinto de liderazgo, gran resistencia, inmune a gases y enfermedades",
+        "Curación y regeneración acelerada",
+        "Genio táctico, artista marcial, acróbata experto"
+      ],
+      "debilidades": [
+        "Su escudo puede ser dañado por armas muy poderosas",
+        "Su sentido del honor y la justicia puede ser explotado por sus enemigos",
+        "Su edad avanzada puede afectar a su rendimiento físico y mental",
+        "Su lealtad a sus amigos puede ponerlo en riesgo"
+      ],
+      "peso": 68,
+      "pesoSuper": 109,
+      "estatura": 1.75,
+      "estaturaSuper": 1.88,
+      "residencia": "Nueva York, Estados Unidos",
+      "afiliacion": [
+        "Los Vengadores",
+        "S.H.I.E.L.D.",
+        "Los Invasores",
+        "All-Winners Squad",
+        "Ejército de los Estados Unidos"
+      ],
+      "enemigos": [
+        "Cráneo Rojo",
+        "HYDRA",
+        "Heinrich Zemo",
+        "Madame Hydra",
+        "Adolf Hitler",
+        "Barón Sangre",
+        "Arnim Zola",
+        "Iron Nail",
+        "Sociedad Serpiente",
+        "Sin",
+        "Crossbones",
+        "Arcade",
+        "Kang el Conquistador",
+        "Ultron",
+        "M.O.D.O.K.",
+        "Kingpin",
+        "Doctor Doom",
+        "Galactus",
+        "Thanos"
+      ],
+      "origen": "Un joven frágil mejorado a la cima de la perfección humana por un suero experimental para ayudar a los esfuerzos de Estados Unidos en la Segunda Guerra Mundial",
+      "personalidad": "Un héroe valiente, noble, altruista, leal, honesto, compasivo, responsable, idealista, patriótico y respetuoso"
+    },
+    {
+      "id": "9",
+      "img": "./assets/VisionT.jpg",
+      "nombre": "Visión",
+      "identidad": "Victor Shade",
+      "poderes": [
+        "Vuelo",
+        "Superfuerza",
+        "Intangibilidad",
+        "Manipulación de la densidad",
+        "Proyección de rayos solares",
+        "Regeneración",
+        "Inteligencia artificial",
+        "Control de maquinaria"
+      ],
+      "debilidades": [
+        "Magnetismo",
+        "Emociones humanas",
+        "Dependencia de la energía solar",
+        "Daño en el cristal de su frente"
+      ],
+      "peso": 135,
+      "pesoSuper": 450,
+      "estatura": 1.91,
+      "estaturaSuper": 2.44,
+      "residencia": "Nueva York, Estados Unidos",
+      "afiliacion": [
+        "Los Vengadores",
+        "Los Defensores",
+        "West Coast Avengers",
+        "A-Force",
+        "New Avengers"
+      ],
+      "enemigos": [
+        "Ultrón",
+        "Thanos",
+        "Magneto",
+        "Doctor Doom",
+        "Kang el Conquistador",
+        "Annihilus",
+        "Norman Osborn",
+        "Skrulls"
+      ],
+      "origen": "Un androide creado por Ultrón a partir del cuerpo del androide original Antorcha Humana y las ondas cerebrales de Wonder Man",
+      "personalidad": "Un ser lógico, racional, curioso, leal, heroico, compasivo, noble y amoroso"
+    }
+  ]
+}

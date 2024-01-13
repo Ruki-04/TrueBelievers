@@ -1,0 +1,566 @@
+<!-- Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" style="font-family: 'Punishment'">
+          CARACTERISTICAS DEL HEROE
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!-- Modal body -->
+      <!-- formulario -->
+      <div class="modal-body container bg-dark text-white">
+        <form [formGroup]="formUser">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              formControlName="nombre"
+              class="form-control"
+              placeholder="Nombre del superhéroe"
+            />
+            <div class="alerta" [hidden]="nombre.valid || nombre.pristine">
+              <span *ngIf="nombre.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                El nombre es obligatorio</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="img">Imagen</label>
+            <input
+              type="text"
+              id="img"
+              formControlName="img"
+              class="form-control"
+              placeholder="URL de la imagen"
+            />
+            <div class="alerta" [hidden]="img.valid || img.pristine">
+              <span *ngIf="img.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La imagen es obligatoria</span
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="identidad">Identidad</label>
+            <input
+              type="text"
+              id="identidad"
+              formControlName="identidad"
+              class="form-control"
+              placeholder="Identidad secreta del superhéroe"
+            />
+            <div
+              class="alerta"
+              [hidden]="identidad.valid || identidad.pristine"
+            >
+              <span *ngIf="identidad.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La identidad es obligatoria</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="poderes">Poderes</label>
+            <div formArrayName="poderes">
+              <div *ngFor="let poder of poderes.controls; let i = index">
+                <input
+                  type="text"
+                  [formControlName]="i"
+                  class="form-control"
+                  placeholder="Poder {{ i + 1 }}"
+                />
+                <div
+                  class="alerta"
+                  [hidden]="
+                    formUser.get(['poderes', i])?.valid ||
+                    formUser.get(['poderes', i])?.pristine
+                  "
+                >
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      class="bi bi-exclamation-triangle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                      />
+                      <path
+                        d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                      />
+                    </svg>
+                    Este campo es obligatorio</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              (click)="AddForm('poderes')"
+              class="btn btn-outline-success"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              (click)="RemoveForm('poderes')"
+              class="btn btn-outline-danger"
+            >
+              -
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="debilidades">Debilidades</label>
+            <div formArrayName="debilidades">
+              <div
+                *ngFor="let debilidad of debilidades.controls; let i = index"
+              >
+                <input
+                  type="text"
+                  [formControlName]="i"
+                  class="form-control"
+                  placeholder="Debilidad {{ i + 1 }}"
+                />
+                <div
+                  class="alerta"
+                  [hidden]="
+                    formUser.get(['debilidades', i])?.valid ||
+                    formUser.get(['debilidades', i])?.pristine
+                  "
+                >
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      class="bi bi-exclamation-triangle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                      />
+                      <path
+                        d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                      />
+                    </svg>
+                    Este campo es obligatorio</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              (click)="AddForm('debilidades')"
+              class="btn btn-outline-success"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              (click)="RemoveForm('debilidades')"
+              class="btn btn-outline-danger"
+            >
+              -
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="peso">Peso</label>
+            <input
+              type="number"
+              id="peso"
+              formControlName="peso"
+              class="form-control"
+              placeholder="Peso normal del superhéroe en kg"
+            />
+            <div class="alerta" [hidden]="peso.valid || peso.pristine">
+              <span *ngIf="peso.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                El peso es obligatorio</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pesoSuper">Peso Super</label>
+            <input
+              type="number"
+              id="pesoSuper"
+              formControlName="pesoSuper"
+              class="form-control"
+              placeholder="Peso del superhéroe en su forma super en kg"
+            />
+            <div
+              class="alerta"
+              [hidden]="pesoSuper.valid || pesoSuper.pristine"
+            >
+              <span *ngIf="pesoSuper.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                El peso del Super Heroe es obligatorio</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="estatura">Estatura</label>
+            <input
+              type="number"
+              id="estatura"
+              formControlName="estatura"
+              class="form-control"
+              placeholder="Estatura normal del superhéroe en cm"
+            />
+            <div class="alerta" [hidden]="estatura.valid || estatura.pristine">
+              <span *ngIf="estatura.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La esatura es obligatoria</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="estaturaSuper">Estatura Super</label>
+            <input
+              type="number"
+              id="estaturaSuper"
+              formControlName="estaturaSuper"
+              class="form-control"
+              placeholder="Estatura del superhéroe en su forma super en cm"
+            />
+            <div
+              class="alerta"
+              [hidden]="estaturaSuper.valid || estaturaSuper.pristine"
+            >
+              <span *ngIf="estaturaSuper.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La estatura del Super Heroe en su forma super es
+                obligatoria</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="residencia">Residencia</label>
+            <input
+              type="text"
+              id="residencia"
+              formControlName="residencia"
+              class="form-control"
+              placeholder="Lugar de residencia del superhéroe"
+            />
+            <div
+              class="alerta"
+              [hidden]="residencia.valid || residencia.pristine"
+            >
+              <span *ngIf="residencia.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La residencia es obligatoria</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="afiliacion">Afiliación</label>
+            <div formArrayName="afiliacion">
+              <div *ngFor="let afiliado of afiliacion.controls; let i = index">
+                <input
+                  type="text"
+                  [formControlName]="i"
+                  class="form-control"
+                  placeholder="Afiliación {{ i + 1 }}"
+                />
+                <div
+                  class="alerta"
+                  [hidden]="
+                    formUser.get(['afiliacion', i])?.valid ||
+                    formUser.get(['afiliacion', i])?.pristine
+                  "
+                >
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      class="bi bi-exclamation-triangle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                      />
+                      <path
+                        d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                      />
+                    </svg>
+                    Este campo es obligatorio</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              (click)="AddForm('afiliacion')"
+              class="btn btn-outline-success"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              (click)="RemoveForm('afiliacion')"
+              class="btn btn-outline-danger"
+            >
+              -
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="enemigos">Enemigos</label>
+            <div formArrayName="enemigos">
+              <div *ngFor="let enemigo of enemigos.controls; let i = index">
+                <input
+                  type="text"
+                  [formControlName]="i"
+                  class="form-control"
+                  placeholder="Enemigo {{ i + 1 }}"
+                />
+                <div
+                  class="alerta"
+                  [hidden]="
+                    formUser.get(['enemigos', i])?.valid ||
+                    formUser.get(['enemigos', i])?.pristine
+                  "
+                >
+                  <span
+                    *ngIf="formUser.get(['enemigos',i])?.errors?.['required']"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      fill="currentColor"
+                      class="bi bi-exclamation-triangle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                      />
+                      <path
+                        d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                      />
+                    </svg>
+                    Este campo es obligatorio</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              (click)="AddForm('enemigos')"
+              class="btn btn-outline-success"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              (click)="RemoveForm('enemigos')"
+              class="btn btn-outline-danger"
+            >
+              -
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="origen">Origen</label>
+            <input
+              type="text"
+              id="origen"
+              formControlName="origen"
+              class="form-control"
+              placeholder="Origen del superhéroe"
+            />
+            <div class="alerta" [hidden]="origen.valid || origen.pristine">
+              <span *ngIf="origen.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                El origen es obligatorio</span
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="personalidad">Personalidad</label>
+            <input
+              type="text"
+              id="personalidad"
+              formControlName="personalidad"
+              class="form-control"
+              placeholder="Personalidad del superhéroe"
+            />
+            <div
+              class="alerta"
+              [hidden]="personalidad.valid || personalidad.pristine"
+            >
+              <span *ngIf="personalidad.errors?.['required']"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"
+                  />
+                  <path
+                    d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"
+                  />
+                </svg>
+                La personalidad es obligatoria</span
+              >
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-outline-success"
+            style="margin-left: 11rem; margin-top: 2rem"
+            data-bs-dismiss="modal"
+            (click)="enviarFormulario()"
+            [disabled]="formUser.invalid"
+          >
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

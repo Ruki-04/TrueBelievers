@@ -1,0 +1,147 @@
+<div class="container bg-dark text-white" style="margin-top: 10rem">
+  <h1 style="background-color: #ed1d24; text-align: center">
+    {{ info.ListaSupers[id].nombre }}
+  </h1>
+  <div
+    id="collapseOne"
+    class="accordion-collapse collapse show"
+    aria-labelledby="headingOne"
+  >
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="{{ info.ListaSupers[id].img }}"
+            alt="{{ info.ListaSupers[id].nombre }}"
+            class="img-fluid"
+          />
+          <div class="row mb-4">
+            <div class="col mt-4">
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Modificar
+              </button>
+              <app-add-super [id]="id"></app-add-super>
+            </div>
+
+            <div class="eliminar col mt-4">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#eliminar"
+              >
+                Eliminar
+              </button>
+
+              <!-- The Modal -->
+              <div class="modal" id="eliminar">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h3
+                        class="modal-title"
+                        style="font-family: 'Punishment'; color: black"
+                      >
+                        Eliminar Super Heroe
+                      </h3>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body bg-dark p-5">
+                      ¿Está seguro que desea elimnar este Súper Héroe? Si lo
+                      elimina no podrá recuperarlo
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer bg-dark">
+                      <button
+                        type="button"
+                        class="btn btn-outline-success"
+                        data-bs-dismiss="modal"
+                        (click)="Eliminar()"
+                        routerLink="/ListaSupers"
+                      >
+                        Aceptar
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-danger"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h2>Identidad</h2>
+          <p>{{ info.ListaSupers[id].identidad }}</p>
+          <h2>Poderes</h2>
+          <ul>
+            <li *ngFor="let poder of info.ListaSupers[id].poderes">
+              {{ poder }}
+            </li>
+          </ul>
+          <h2>Debilidades</h2>
+          <ul>
+            <li *ngFor="let debilidad of info.ListaSupers[id].debilidades">
+              {{ debilidad }}
+            </li>
+          </ul>
+          <h2>Medidas</h2>
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Peso</th>
+                <th scope="col">Peso Super</th>
+                <th scope="col">Estatura</th>
+                <th scope="col">Estatura Super</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ info.ListaSupers[id].peso }}</td>
+                <td>{{ info.ListaSupers[id].pesoSuper }}</td>
+                <td>{{ info.ListaSupers[id].estatura }}</td>
+                <td>{{ info.ListaSupers[id].estaturaSuper }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Residencia</h2>
+          <p>{{ info.ListaSupers[id].residencia }}</p>
+          <h2>Afiliación</h2>
+          <ul>
+            <li *ngFor="let afiliacion of info.ListaSupers[id].afiliacion">
+              {{ afiliacion }}
+            </li>
+          </ul>
+          <h2>Enemigos</h2>
+          <ul>
+            <li *ngFor="let enemigo of info.ListaSupers[id].enemigos">
+              {{ enemigo }}
+            </li>
+          </ul>
+          <h2>Origen</h2>
+          <p>{{ info.ListaSupers[id].origen }}</p>
+          <h2>Personalidad</h2>
+          <p>{{ info.ListaSupers[id].personalidad }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

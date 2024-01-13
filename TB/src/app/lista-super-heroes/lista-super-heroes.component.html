@@ -1,0 +1,88 @@
+<!-- Lista -->
+<div class="portada">
+  <img
+    src="./assets/ListaSuper.jpg"
+    alt="Super heroes"
+    class="d-block w-100 mt-4"
+  />
+  <div class="texto">
+    <h1 class="col mt-5 mb-4 titulo-lista">
+      Super Heroes de
+      <span class="logo-marvel">MARVEL</span>
+    </h1>
+  </div>
+</div>
+<div class="filtros row">
+  <form class="col busqueda">
+    <div class="mb-4">
+      <button class="my-2 my-sm-0" type="submit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="20"
+          fill="currentColor"
+          class="bi bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+          />
+        </svg></button
+      ><input
+        class="mr-sm-2"
+        style="color: white"
+        type="search"
+        placeholder="Buscar"
+        name="buscar"
+        aria-label="Buscar"
+        [(ngModel)]="busqueda"
+        (ngModelChange)="Actualizar()"
+      />
+    </div>
+  </form>
+</div>
+
+<div class="row lista">
+  <div
+    class="col-12 col-md-12 col-lg-3"
+    *ngFor="let i of info.ListaSupers; let j = index"
+  >
+    <app-super-heroe [j]="j"></app-super-heroe>
+  </div>
+
+  <!-- chequear -->
+  <div class="col-12 col-md-12 col-lg-3">
+    <div class="card border-0 px-2 py-3 mb-4 cartaAdd">
+      <div class="mt-2">
+        <a
+          class="nav-link list-group-item"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+          ><div class="card-body add">
+            <div class="text-center">
+              <img src="./assets/AddT.jpg" />
+            </div>
+            <div class="icono">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-file-earmark-plus-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M8.5 7v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 1 0"
+                />
+              </svg>
+            </div></div
+        ></a>
+
+        <app-add-super></app-add-super>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+</div>
