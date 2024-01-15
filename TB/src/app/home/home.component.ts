@@ -23,8 +23,4 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
   constructor(public info: SuperHeroesService) {}
-
-  ngOnInit() {
-    this.info.getSupers();
-  }
 }

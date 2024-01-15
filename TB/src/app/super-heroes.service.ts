@@ -8,7 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class SuperHeroesService {
   ListaSupers: Array<Super> = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getSupers();
+  }
 
   getSupers(): void {
     this.http
