@@ -35,7 +35,7 @@ import { ListaSuperHeroesComponent } from '../lista-super-heroes/lista-super-her
 })
 export class AddSuperComponent implements OnInit {
   miSuper: Super = new Super();
-  @Input() id: number = -1;
+  id: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -154,21 +154,21 @@ export class AddSuperComponent implements OnInit {
     this.miSuper.enemigos = this.formUser.get('enemigos')?.value ?? [];
     this.miSuper.debilidades = this.formUser.get('debilidades')?.value ?? [];
 
-    if (this.id == -1) {
+    if (this.id == '') {
       this.miSuper.id = this.generateUuid();
       this.info.postSuper(this.miSuper);
     } else {
-      this.info.putSuper(this.miSuper, this.id);
+      this.info.putSuper(this.miSuper);
     }
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      if (!isNaN(parseInt(params['id']))) this.id = parseInt(params['id']);
+      if (!isNaN(params['id'])) this.id = params['id'];
     });
 
-    if (this.id != -1) {
-      this.miSuper = this.info.ListaSupers[this.id];
+    if (this.id != '') {
+      this.miSuper = this.info.aux;
       this.formUser.get('img')?.setValue(this.miSuper.img);
       this.formUser.get('nombre')?.setValue(this.miSuper.nombre);
       this.formUser.get('identidad')?.setValue(this.miSuper.identidad);

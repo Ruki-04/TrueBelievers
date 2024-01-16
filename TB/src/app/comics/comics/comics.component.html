@@ -1,14 +1,13 @@
 <div class="card border-0 px-2 py-3 mb-4">
   <div class="mt-2">
-    <a class="list-group-item" [routerLink]="['caracteristicas', j.id]">
+    <a class="list-group-item">
       <div class="card-body">
         <div class="text-center">
-          <img src="{{ j.img }}" />
+          <img src="{{ info.ListaComics[j].img }}" />
         </div>
 
-        <h5>{{ j.nombre }}</h5>
+        <h5>{{ info.ListaComics[j].nombre }}</h5>
       </div>
     </a>
   </div>
 </div>
-<router-outlet></router-outlet>

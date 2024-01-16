@@ -22,5 +22,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  constructor(public info: SuperHeroesService) {}
+  constructor(public info: SuperHeroesService) {
+    this.info.getSupers();
+  }
+
+  ngOnInit() {}
 }

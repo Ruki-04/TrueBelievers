@@ -1,6 +1,6 @@
 <div class="container bg-dark text-white" style="margin-top: 10rem">
   <h1 style="background-color: #ed1d24; text-align: center">
-    {{ info.ListaSupers[id].nombre }}
+    {{ this.info.aux.nombre }}
   </h1>
   <div
     id="collapseOne"
@@ -11,8 +11,8 @@
       <div class="row">
         <div class="col-md-4">
           <img
-            src="{{ info.ListaSupers[id].img }}"
-            alt="{{ info.ListaSupers[id].nombre }}"
+            src="{{ this.info.aux.img }}"
+            alt="{{ this.info.aux.nombre }}"
             class="img-fluid"
           />
           <div class="row mb-4">
@@ -25,7 +25,7 @@
               >
                 Modificar
               </button>
-              <app-add-super [id]="id"></app-add-super>
+              <app-add-super></app-add-super>
             </div>
 
             <div class="eliminar col mt-4">
@@ -90,16 +90,16 @@
         </div>
         <div class="col-md-8">
           <h2>Identidad</h2>
-          <p>{{ info.ListaSupers[id].identidad }}</p>
+          <p>{{ this.info.aux.identidad }}</p>
           <h2>Poderes</h2>
           <ul>
-            <li *ngFor="let poder of info.ListaSupers[id].poderes">
+            <li *ngFor="let poder of this.info.aux.poderes">
               {{ poder }}
             </li>
           </ul>
           <h2>Debilidades</h2>
           <ul>
-            <li *ngFor="let debilidad of info.ListaSupers[id].debilidades">
+            <li *ngFor="let debilidad of this.info.aux.debilidades">
               {{ debilidad }}
             </li>
           </ul>
@@ -115,31 +115,31 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ info.ListaSupers[id].peso }}</td>
-                <td>{{ info.ListaSupers[id].pesoSuper }}</td>
-                <td>{{ info.ListaSupers[id].estatura }}</td>
-                <td>{{ info.ListaSupers[id].estaturaSuper }}</td>
+                <td>{{ this.info.aux.peso }}</td>
+                <td>{{ this.info.aux.pesoSuper }}</td>
+                <td>{{ this.info.aux.estatura }}</td>
+                <td>{{ this.info.aux.estaturaSuper }}</td>
               </tr>
             </tbody>
           </table>
           <h2>Residencia</h2>
-          <p>{{ info.ListaSupers[id].residencia }}</p>
+          <p>{{ this.info.aux.residencia }}</p>
           <h2>Afiliación</h2>
           <ul>
-            <li *ngFor="let afiliacion of info.ListaSupers[id].afiliacion">
+            <li *ngFor="let afiliacion of this.info.aux.afiliacion">
               {{ afiliacion }}
             </li>
           </ul>
           <h2>Enemigos</h2>
           <ul>
-            <li *ngFor="let enemigo of info.ListaSupers[id].enemigos">
+            <li *ngFor="let enemigo of this.info.aux.enemigos">
               {{ enemigo }}
             </li>
           </ul>
           <h2>Origen</h2>
-          <p>{{ info.ListaSupers[id].origen }}</p>
+          <p>{{ this.info.aux.origen }}</p>
           <h2>Personalidad</h2>
-          <p>{{ info.ListaSupers[id].personalidad }}</p>
+          <p>{{ this.info.aux.personalidad }}</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   RouterLink,
@@ -25,17 +25,19 @@ import { AddSuperComponent } from '../add-super/add-super.component';
   templateUrl: './super-heroe-caracteristicas.component.html',
   styleUrl: './super-heroe-caracteristicas.component.css',
 })
-export class SuperHeroeCaracteristicasComponent {
+export class SuperHeroeCaracteristicasComponent implements OnInit {
   modificar: boolean = false;
-  id: number = 0;
+  id!: string;
 
   Eliminar() {
-    this.info.deleteSuper(this.info.ListaSupers[this.id].id, this.id);
+    this.info.deleteSuper(this.id);
   }
 
-  constructor(private route: ActivatedRoute, public info: SuperHeroesService) {
+  constructor(private route: ActivatedRoute, public info: SuperHeroesService) {}
+  ngOnInit() {
     this.route.params.subscribe((params) => {
-      this.id = parseInt(params['id']);
+      this.id = params['id'];
+      this.info.getSuper(this.id);
     });
   }
 }

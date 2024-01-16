@@ -197,7 +197,7 @@
       "peso": 58,
       "pesoSuper": 635,
       "estatura": 1.73,
-      "estaturaSuper": 3.0,
+      "estaturaSuper": 3,
       "residencia": "Hell's Kitchen, Nueva York",
       "afiliacion": [
         "Los Vengadores",
@@ -221,7 +221,7 @@
     {
       "id": "6",
       "img": "./assets/SpiderMoralesT.jpg",
-      "nombre": "Spiderman",
+      "nombre": "Spiderman (Miles Morales)",
       "identidad": "Miles Morales",
       "poderes": [
         "trepar muros",
@@ -231,13 +231,21 @@
         "camuflaje",
         "rayo venenoso"
       ],
-      "debilidades": ["gases", "enfermedades", "pobreza", "seres queridos"],
+      "debilidades": [
+        "gases",
+        "enfermedades",
+        "pobreza",
+        "seres queridos"
+      ],
       "peso": 67,
       "pesoSuper": 167,
       "estatura": 1.68,
       "estaturaSuper": 1.78,
       "residencia": "Forest Hills, Queens, Nueva York",
-      "afiliacion": ["Los Vengadores", "Los Campeones"],
+      "afiliacion": [
+        "Los Vengadores",
+        "Los Campeones"
+      ],
       "enemigos": [
         "Duende Verde",
         "Doctor Octopus",
@@ -350,7 +358,7 @@
       "personalidad": "Un héroe valiente, noble, altruista, leal, honesto, compasivo, responsable, idealista, patriótico y respetuoso"
     },
     {
-      "id": "9",
+      "id": "10",
       "img": "./assets/VisionT.jpg",
       "nombre": "Visión",
       "identidad": "Victor Shade",

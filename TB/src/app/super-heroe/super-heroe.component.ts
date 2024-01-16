@@ -17,9 +17,10 @@ import { SuperHeroesService } from '../super-heroes.service';
   templateUrl: './super-heroe.component.html',
   styleUrl: './super-heroe.component.css',
 })
-export class SuperHeroeComponent {
+export class SuperHeroeComponent implements OnInit {
   modificar: boolean = false;
-  @Input() j: number = -1;
+  @Input() j: Super = new Super();
+
   constructor(public info: SuperHeroesService) {}
 
   ngOnInit() {}

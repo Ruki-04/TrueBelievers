@@ -6,12 +6,13 @@ import { RouterLink, RouterOutlet, RouterModule } from '@angular/router';
 import { SuperHeroeComponent } from '../super-heroe/super-heroe.component';
 import { SuperHeroesService } from '../super-heroes.service';
 import { AddSuperComponent } from '../add-super/add-super.component';
-
+import { FiltroPipe } from '../filtro.pipe';
 @Component({
   selector: 'app-lista-super-heroes',
   standalone: true,
   imports: [
     HttpClientModule,
+    FiltroPipe,
     RouterLink,
     FormsModule,
     RouterModule,
@@ -32,8 +33,5 @@ export class ListaSuperHeroesComponent {
 
   ngOnInit() {
     this.info.getSupers();
-  }
-  Actualizar(): void {
-    this.info.Actualizar(this.busqueda);
   }
 }

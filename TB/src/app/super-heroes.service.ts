@@ -20,6 +20,15 @@ export class SuperHeroesService {
       });
   }
 
+  aux: Super = new Super();
+  getSuper(id: string): void {
+    this.http
+      .get<Super>('http://localhost:3000/supers/' + id)
+      .subscribe((nuevo) => {
+        this.aux = nuevo;
+      });
+  }
+
   postSuper(Super: Super): void {
     this.http
       .post<Super>('http://localhost:3000/supers', Super)
@@ -29,31 +38,18 @@ export class SuperHeroesService {
     this.getSupers();
   }
 
-  deleteSuper(x: string, j: number): void {
+  deleteSuper(x: string): void {
     this.http
-      .delete<Super>('http://localhost:3000/supers/' + x)
+      .delete<Super[]>('http://localhost:3000/supers/' + x)
       .subscribe((data) => {
-        this.ListaSupers.splice(j, 1);
+        this.ListaSupers = data;
       });
   }
-  putSuper(miSuper: Super, j: number): void {
+  putSuper(miSuper: Super): void {
     this.http
-      .put<Super>('http://localhost:3000/supers/' + miSuper.id, miSuper)
+      .put<Super[]>('http://localhost:3000/supers/' + miSuper.id, miSuper)
       .subscribe((data) => {
-        this.ListaSupers[j] = data;
+        this.ListaSupers = data;
       });
-  }
-  Actualizar(busqueda: string): void {
-    if (busqueda == '') {
-      this.getSupers();
-    } else {
-      let nuevo: Super[] = [];
-      for (let i of this.ListaSupers) {
-        if (i.nombre.toLowerCase().indexOf(busqueda.toLowerCase()) != -1) {
-          nuevo.push(i);
-        }
-      }
-      this.ListaSupers = nuevo;
-    }
   }
 }

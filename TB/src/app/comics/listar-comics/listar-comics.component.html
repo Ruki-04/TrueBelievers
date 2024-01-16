@@ -7,7 +7,7 @@
   />
   <div class="texto">
     <h1 class="col mt-5 mb-4 titulo-lista">
-      Super Heroes de
+      Comics de
       <span class="logo-marvel">MARVEL</span>
     </h1>
   </div>
@@ -36,6 +36,7 @@
         name="buscar"
         aria-label="Buscar"
         [(ngModel)]="busqueda"
+        (ngModelChange)="Actualizar()"
       />
     </div>
   </form>
@@ -44,9 +45,9 @@
 <div class="row lista">
   <div
     class="col-12 col-md-12 col-lg-3"
-    *ngFor="let j of info.ListaSupers | filtro : busqueda; let i = index"
+    *ngFor="let i of info.ListaComics; let j = index"
   >
-    <app-super-heroe [j]="j"></app-super-heroe>
+    <app-comics [j]="j"></app-comics>
   </div>
 
   <!-- chequear -->
@@ -56,7 +57,7 @@
         <a
           class="nav-link list-group-item"
           data-bs-toggle="modal"
-          data-bs-target="#myModal"
+          data-bs-target="#addComic"
           ><div class="card-body add">
             <div class="text-center">
               <img src="./assets/AddT.jpg" />
@@ -77,7 +78,7 @@
             </div></div
         ></a>
 
-        <app-add-super></app-add-super>
+        <!-- <app-add-super></app-add-super> -->
       </div>
     </div>
   </div>
