@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SuperHeroesService {
   ListaSupers: Array<Super> = [];
-
+  aux: Super = new Super();
   constructor(private http: HttpClient) {
     this.getSupers();
   }
@@ -19,8 +19,6 @@ export class SuperHeroesService {
         this.ListaSupers = nuevo;
       });
   }
-
-  aux: Super = new Super();
   getSuper(id: string): void {
     this.http
       .get<Super>('http://localhost:3000/supers/' + id)
